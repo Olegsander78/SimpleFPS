@@ -16,11 +16,15 @@ public class Player : MonoBehaviour
 
     private Camera cam;
     private Rigidbody rig;
+    private Weapon weapon;
 
     private void Awake()
     {
         cam = Camera.main;
         rig = GetComponent<Rigidbody>();
+        weapon = GetComponent<Weapon>();
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
@@ -29,6 +33,13 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
             TryJump();
+
+        if (Input.GetButton("Fire1"))
+        {
+            if (weapon.CanShoot())
+                weapon.Shoot();
+        }
+
     }
 
     private void LateUpdate()
