@@ -20,7 +20,9 @@ public class Weapon : MonoBehaviour
     private void Awake()
     {
         if (GetComponent<Player>())
+        {
             isPlayer = true;
+        }
     }
 
     public bool CanShoot()
