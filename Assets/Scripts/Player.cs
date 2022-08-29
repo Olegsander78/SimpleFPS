@@ -30,9 +30,18 @@ public class Player : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
     }
+    private void Start()
+    {
+        GameUI.instance.UpdateHealthBar(curHp, maxHp);
+        GameUI.instance.UpdateScoreText(0);
+        GameUI.instance.UpdateAmmoText(weapon.curAmmo, weapon.maxAmmo);
+    }
 
     private void Update()
     {
+        if (GameManager.instance.gamePaused == true)
+            return;
+
         Move();
 
         if (Input.GetButtonDown("Jump"))
@@ -84,19 +93,25 @@ public class Player : MonoBehaviour
     {
         curHp -= damage;
 
+        GameUI.instance.UpdateHealthBar(curHp, maxHp);
+
         if (curHp <= 0)
             Die();
     }
     void Die()
     {
-        
+        GameManager.instance.LoseGame(); 
     }
     public void GiveHealth(int amountToGive)
     {
         curHp = Mathf.Clamp(curHp + amountToGive, 0, maxHp);
+
+        GameUI.instance.UpdateHealthBar(curHp, maxHp);
     }
     public void GiveAmmo(int amountToGive)
     {
         weapon.curAmmo = Mathf.Clamp(weapon.curAmmo + amountToGive, 0, weapon.maxAmmo);
+
+        GameUI.instance.UpdateAmmoText(weapon.curAmmo, weapon.maxAmmo);
     }
 }

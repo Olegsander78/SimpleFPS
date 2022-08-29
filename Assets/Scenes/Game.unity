@@ -757,7 +757,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 242576227}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1660362967}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
+        m_MethodName: OnResumeButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &242576227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11045,7 +11057,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 668526162}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1660362967}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
+        m_MethodName: OnRestartButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &668526162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11437,7 +11461,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 819877741}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1660362967}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
+        m_MethodName: OnRestartButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &819877741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11559,7 +11595,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 893291770}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1660362967}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
+        m_MethodName: OnMenuButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &893291770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13095,6 +13143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1660362966}
   - component: {fileID: 1660362967}
+  - component: {fileID: 1660362968}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: Untagged
@@ -13129,13 +13178,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5986a8016ff334d90de03a8a57f47d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  ammoText: {fileID: 0}
-  healthBarFill: {fileID: 0}
-  pauseMenu: {fileID: 0}
-  endGameScreen: {fileID: 0}
-  endGameHeaderText: {fileID: 0}
-  endGameScoreText: {fileID: 0}
+  scoreText: {fileID: 1208197754}
+  ammoText: {fileID: 383010966}
+  healthBarFill: {fileID: 274026221}
+  pauseMenu: {fileID: 1395903981}
+  endGameScreen: {fileID: 819517985}
+  endGameHeaderText: {fileID: 819517987}
+  endGameScoreText: {fileID: 1901240714}
+--- !u!114 &1660362968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660362965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13bd5c1317fbb042ac34f931ebbe4bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreToWin: 50
+  curScore: 0
+  gamePaused: 0
 --- !u!1 &1663215383
 GameObject:
   m_ObjectHideFlags: 0
@@ -13219,7 +13283,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1663215386}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1660362967}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
+        m_MethodName: OnMenuButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1663215386
 MonoBehaviour:
   m_ObjectHideFlags: 0
