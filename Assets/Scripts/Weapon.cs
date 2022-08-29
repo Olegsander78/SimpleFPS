@@ -17,12 +17,17 @@ public class Weapon : MonoBehaviour
     private float lastShootTime;
     private bool isPlayer;
 
+    public AudioClip shootSFX;
+    private AudioSource audioSource;
+
     private void Awake()
     {
         if (GetComponent<Player>())
         {
             isPlayer = true;
         }
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     public bool CanShoot()
@@ -43,6 +48,8 @@ public class Weapon : MonoBehaviour
 
         if (isPlayer)
             GameUI.instance.UpdateAmmoText(curAmmo, maxAmmo);
+
+        audioSource.PlayOneShot(shootSFX);
 
         GameObject bullet = bulletPool.GetObject();
 

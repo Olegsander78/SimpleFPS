@@ -13,6 +13,8 @@ public class Pickup : MonoBehaviour
     public PickupType type;
     public int value;
 
+    public AudioClip pickupSFX;
+
     [Header("Bobbing")]
     public float rotateSpeed;
     public float bobSpeed;
@@ -54,6 +56,7 @@ public class Pickup : MonoBehaviour
                     break;
             }
 
+            other.GetComponent<AudioSource>().PlayOneShot(pickupSFX);
             Destroy(gameObject);
         }
     }
